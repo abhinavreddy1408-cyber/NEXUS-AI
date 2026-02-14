@@ -1,0 +1,289 @@
+{
+    "symbol": "RELIANCE.NS",
+    "company_name": "Reliance Industries Limited",
+    "exchange": "NSE",
+    "latest": {
+        "timestamp": "2026-02-08T15:30:00Z",
+        "close": 2485.75,
+        "change": 35.25,
+        "change_pct": 1.44
+    },
+    "fundamentals": {
+        "market_cap": 16800000000000,
+        "pe_ratio": 25.42,
+        "eps": 97.78,
+        "dividend_yield": 0.0032,
+        "sector": "Oil & Gas",
+        "52_week_high": 2856.15,
+        "52_week_low": 2180.00,
+        "day_high": 2492.00,
+        "day_low": 2458.30,
+        "volume": 8542100
+    },
+    "historical": [
+        {
+            "timestamp": "2026-01-08T00:00:00Z",
+            "open": 2320.00,
+            "high": 2345.50,
+            "low": 2310.25,
+            "close": 2338.40,
+            "volume": 7245300
+        },
+        {
+            "timestamp": "2026-01-09T00:00:00Z",
+            "open": 2340.00,
+            "high": 2358.75,
+            "low": 2328.00,
+            "close": 2352.15,
+            "volume": 6892100
+        },
+        {
+            "timestamp": "2026-01-10T00:00:00Z",
+            "open": 2355.00,
+            "high": 2372.00,
+            "low": 2348.50,
+            "close": 2365.80,
+            "volume": 7123400
+        },
+        {
+            "timestamp": "2026-01-13T00:00:00Z",
+            "open": 2368.00,
+            "high": 2385.25,
+            "low": 2360.00,
+            "close": 2378.90,
+            "volume": 6542800
+        },
+        {
+            "timestamp": "2026-01-14T00:00:00Z",
+            "open": 2380.00,
+            "high": 2398.00,
+            "low": 2372.50,
+            "close": 2392.45,
+            "volume": 6891200
+        },
+        {
+            "timestamp": "2026-01-15T00:00:00Z",
+            "open": 2395.00,
+            "high": 2412.50,
+            "low": 2388.00,
+            "close": 2405.30,
+            "volume": 7234500
+        },
+        {
+            "timestamp": "2026-01-16T00:00:00Z",
+            "open": 2408.00,
+            "high": 2425.75,
+            "low": 2400.25,
+            "close": 2418.60,
+            "volume": 6987300
+        },
+        {
+            "timestamp": "2026-01-17T00:00:00Z",
+            "open": 2420.00,
+            "high": 2438.00,
+            "low": 2412.00,
+            "close": 2432.15,
+            "volume": 7456200
+        },
+        {
+            "timestamp": "2026-01-20T00:00:00Z",
+            "open": 2435.00,
+            "high": 2452.50,
+            "low": 2428.75,
+            "close": 2445.80,
+            "volume": 7123900
+        },
+        {
+            "timestamp": "2026-01-21T00:00:00Z",
+            "open": 2448.00,
+            "high": 2465.25,
+            "low": 2440.00,
+            "close": 2458.40,
+            "volume": 6845700
+        },
+        {
+            "timestamp": "2026-01-22T00:00:00Z",
+            "open": 2460.00,
+            "high": 2478.50,
+            "low": 2452.25,
+            "close": 2472.15,
+            "volume": 7289400
+        },
+        {
+            "timestamp": "2026-01-23T00:00:00Z",
+            "open": 2475.00,
+            "high": 2492.00,
+            "low": 2468.00,
+            "close": 2485.75,
+            "volume": 8542100
+        }
+    ],
+    "indicators": {
+        "sma20": [
+            {
+                "timestamp": "2026-01-20T00:00:00Z",
+                "value": 2398.50
+            },
+            {
+                "timestamp": "2026-01-21T00:00:00Z",
+                "value": 2412.35
+            },
+            {
+                "timestamp": "2026-01-22T00:00:00Z",
+                "value": 2428.90
+            },
+            {
+                "timestamp": "2026-01-23T00:00:00Z",
+                "value": 2445.20
+            }
+        ],
+        "sma50": [
+            {
+                "timestamp": "2026-01-22T00:00:00Z",
+                "value": 2365.80
+            },
+            {
+                "timestamp": "2026-01-23T00:00:00Z",
+                "value": 2378.45
+            }
+        ],
+        "ema20": [
+            {
+                "timestamp": "2026-01-20T00:00:00Z",
+                "value": 2402.15
+            },
+            {
+                "timestamp": "2026-01-21T00:00:00Z",
+                "value": 2418.70
+            },
+            {
+                "timestamp": "2026-01-22T00:00:00Z",
+                "value": 2438.25
+            },
+            {
+                "timestamp": "2026-01-23T00:00:00Z",
+                "value": 2458.90
+            }
+        ],
+        "rsi14": [
+            {
+                "timestamp": "2026-01-22T00:00:00Z",
+                "value": 68.5
+            },
+            {
+                "timestamp": "2026-01-23T00:00:00Z",
+                "value": 72.3
+            }
+        ],
+        "bollinger": {
+            "upper": [
+                {
+                    "timestamp": "2026-01-22T00:00:00Z",
+                    "value": 2498.75
+                },
+                {
+                    "timestamp": "2026-01-23T00:00:00Z",
+                    "value": 2512.40
+                }
+            ],
+            "middle": [
+                {
+                    "timestamp": "2026-01-22T00:00:00Z",
+                    "value": 2428.90
+                },
+                {
+                    "timestamp": "2026-01-23T00:00:00Z",
+                    "value": 2445.20
+                }
+            ],
+            "lower": [
+                {
+                    "timestamp": "2026-01-22T00:00:00Z",
+                    "value": 2359.05
+                },
+                {
+                    "timestamp": "2026-01-23T00:00:00Z",
+                    "value": 2378.00
+                }
+            ]
+        }
+    },
+    "prediction": {
+        "available": true,
+        "model_name": "momentum-volatility-v1",
+        "model_version": "1.0.0",
+        "confidence_score": 0.78,
+        "forecast_horizon_days": 7,
+        "forecast": [
+            {
+                "timestamp": "2026-01-24T00:00:00Z",
+                "predicted_close": 2498.50,
+                "lower_ci": 2462.30,
+                "upper_ci": 2534.70
+            },
+            {
+                "timestamp": "2026-01-27T00:00:00Z",
+                "predicted_close": 2512.80,
+                "lower_ci": 2468.45,
+                "upper_ci": 2557.15
+            },
+            {
+                "timestamp": "2026-01-28T00:00:00Z",
+                "predicted_close": 2525.35,
+                "lower_ci": 2472.90,
+                "upper_ci": 2577.80
+            },
+            {
+                "timestamp": "2026-01-29T00:00:00Z",
+                "predicted_close": 2538.20,
+                "lower_ci": 2476.50,
+                "upper_ci": 2599.90
+            },
+            {
+                "timestamp": "2026-01-30T00:00:00Z",
+                "predicted_close": 2548.75,
+                "lower_ci": 2478.40,
+                "upper_ci": 2619.10
+            }
+        ],
+        "backtest": {
+            "MAE": 28.45,
+            "RMSE": 42.18,
+            "coverage_pct": 94.2,
+            "last_trained": "2026-01-15T00:00:00Z"
+        },
+        "explanation": "Strong upward momentum detected; rising volume supports the trend; low volatility suggests stable price action."
+    },
+    "news": [
+        {
+            "timestamp": "2026-02-08T10:30:00Z",
+            "headline": "Reliance Industries reports strong quarterly earnings",
+            "summary": "The company exceeded analyst expectations with revenue growth of 12% YoY, driven by robust performance in retail and digital services segments.",
+            "sentiment_score": 0.75
+        },
+        {
+            "timestamp": "2026-02-07T14:15:00Z",
+            "headline": "Analysts upgrade Reliance to 'Buy' with higher price target",
+            "summary": "Multiple brokerages have raised their price targets following positive industry trends and strong O2C margins.",
+            "sentiment_score": 0.62
+        },
+        {
+            "timestamp": "2026-02-06T09:45:00Z",
+            "headline": "Reliance Jio announces 5G expansion plans",
+            "summary": "The telecom arm plans to expand 5G coverage to 1000 cities by Q2 2026, with investments of ₹15,000 crore.",
+            "sentiment_score": 0.58
+        },
+        {
+            "timestamp": "2026-02-05T16:20:00Z",
+            "headline": "Market volatility affects blue-chip stocks",
+            "summary": "Broader market uncertainty led to increased trading volumes across major indices, with Reliance seeing above-average activity.",
+            "sentiment_score": -0.12
+        },
+        {
+            "timestamp": "2026-02-04T11:00:00Z",
+            "headline": "Reliance maintains dividend policy for FY26",
+            "summary": "Board confirms interim dividend of ₹10 per share, continuing its shareholder-friendly capital allocation strategy.",
+            "sentiment_score": 0.45
+        }
+    ]
+}

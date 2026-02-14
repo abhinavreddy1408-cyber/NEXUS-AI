@@ -1,0 +1,129 @@
+// E2E Test Skeleton for Stock Gallery
+// Run with: npx playwright test src/stock-gallery/__tests__/e2e.spec.ts
+
+import { test, expect } from "@playwright/test";
+
+test.describe("Stock Gallery E2E Tests", () => {
+
+    test.beforeEach(async ({ page }) => {
+        // Navigate to the Stock Gallery page
+        await page.goto("/stock-gallery");
+    });
+
+    test("should display gallery page with search bar", async ({ page }) => {
+        // Verify page title
+        await expect(page.locator("h1")).toContainText("Stock Gallery");
+
+        // Verify search bar is present
+        const searchInput = page.locator('input[placeholder*="Search stocks"]');
+        await expect(searchInput).toBeVisible();
+    });
+
+    test("should show search results when typing", async ({ page }) => {
+        const searchInput = page.locator('input[placeholder*="Search stocks"]');
+
+        // Type search query
+        await searchInput.fill("RELIANCE");
+
+        // Wait for results dropdown
+        await page.waitForTimeout(500); // Wait for debounce
+
+        // Results should appear
+        const resultsDropdown = page.locator('[role="listbox"]');
+        await expect(resultsDropdown).toBeVisible();
+    });
+
+    test("should open detail panel when selecting a stock", async ({ page }) => {
+        // Click on a popular stock button
+        const relianceButton = page.locator('button:has-text("RELIANCE")');
+        await relianceButton.click();
+
+        // Detail panel modal should open
+        const detailPanel = page.locator('[role="dialog"]');
+        await expect(detailPanel).toBeVisible();
+
+        // Should show the symbol
+        await expect(detailPanel.locator("h2")).toContainText("RELIANCE");
+    });
+
+    test("should display chart in detail panel", async ({ page }) => {
+        // Open a stock detail panel
+        const relianceButton = page.locator('button:has-text("RELIANCE")');
+        await relianceButton.click();
+
+        // Wait for loading to complete
+        await page.waitForSelector('[role="dialog"]');
+        await page.waitForTimeout(2000); // Wait for data fetch
+
+        // Chart container should be visible
+        const chartSection = page.locator('text=Price Chart');
+        await expect(chartSection).toBeVisible();
+    });
+
+    test("should show prediction card with forecast", async ({ page }) => {
+        // Open a stock detail panel
+        const relianceButton = page.locator('button:has-text("RELIANCE")');
+        await relianceButton.click();
+
+        // Wait for data to load
+        await page.waitForTimeout(2000);
+
+        // Prediction card should be visible
+        const predictionCard = page.locator('text=AI Price Prediction');
+        await expect(predictionCard).toBeVisible();
+    });
+
+    test("should close detail panel with Escape key", async ({ page }) => {
+        // Open a stock detail panel
+        const relianceButton = page.locator('button:has-text("RELIANCE")');
+        await relianceButton.click();
+
+        // Verify panel is open
+        const detailPanel = page.locator('[role="dialog"]');
+        await expect(detailPanel).toBeVisible();
+
+        // Press Escape
+        await page.keyboard.press("Escape");
+
+        // Panel should be closed
+        await expect(detailPanel).not.toBeVisible();
+    });
+
+    test("should navigate search results with keyboard", async ({ page }) => {
+        const searchInput = page.locator('input[placeholder*="Search stocks"]');
+
+        // Type search query
+        await searchInput.fill("TCS");
+        await page.waitForTimeout(500);
+
+        // Press down arrow to navigate
+        await page.keyboard.press("ArrowDown");
+
+        // First result should be selected (highlighted)
+        const firstResult = page.locator('[role="option"][aria-selected="true"]');
+        await expect(firstResult).toBeVisible();
+
+        // Press Enter to select
+        await page.keyboard.press("Enter");
+
+        // Detail panel should open
+        const detailPanel = page.locator('[role="dialog"]');
+        await expect(detailPanel).toBeVisible();
+    });
+
+    test("should change time period in chart", async ({ page }) => {
+        // Open a stock detail panel
+        const relianceButton = page.locator('button:has-text("RELIANCE")');
+        await relianceButton.click();
+
+        await page.waitForTimeout(2000);
+
+        // Click on different period
+        const monthButton = page.locator('button:has-text("1M")');
+        await monthButton.click();
+
+        // Should still show chart (verify it didn't break)
+        const chartSection = page.locator('text=Price Chart');
+        await expect(chartSection).toBeVisible();
+    });
+});

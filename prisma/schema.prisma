@@ -1,0 +1,41 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String   // Hash this!
+  stocks    Stock[]
+  history   Analysis[]
+}
+
+model Stock {
+  id             String  @id @default(cuid())
+  symbol         String  // e.g., "AAPL"
+  buyPrice       Float
+  quantity       Int
+  profitThreshold Float
+  userId         String
+  user           User    @relation(fields: [userId], references: [id])
+}
+
+model Analysis {
+  id             String   @id @default(cuid())
+  industry       String
+  problem        String
+  recommendation String
+  profitScore    Int
+  riskScore      Int
+  createdAt      DateTime @default(now())
+  userId         String
+  user           User     @relation(fields: [userId], references: [id])
+}
